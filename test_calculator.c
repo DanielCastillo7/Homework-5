@@ -56,6 +56,12 @@ void test_subtract_mixed_numbers(void) {
     TEST_ASSERT_EQUAL(8, subtract(5, -3)); // Expect 5 - (-3) = 8
 }
 
+void test_multiply_numbers(void) {
+    TEST_ASSERT_EQUAL(15, multiply(5, 3)); // Expect 5 * 3 = 15
+    TEST_ASSERT_EQUAL(-15, multiply(5, -3)); // Expect 5 * -3 = -15
+    TEST_ASSERT_EQUAL(0, multiply(5, 0)); // Expect 5 * 0 = 0
+}
+
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_add_positive_numbers);
@@ -67,4 +73,5 @@ int main(void) {
     RUN_TEST(test_subtract_positive_numbers);
     RUN_TEST(test_subtract_negative_numbers);
     RUN_TEST(test_subtract_mixed_numbers);
+    RUN_TEST(test_multiply_numbers);
 }
