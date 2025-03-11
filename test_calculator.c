@@ -62,6 +62,14 @@ void test_multiply_numbers(void) {
     TEST_ASSERT_EQUAL(0, multiply(5, 0)); // Expect 5 * 0 = 0
 }
 
+void test_divide_numbers(void) {
+    TEST_ASSERT_EQUAL(2, divide(6, 3)); // Expect 6 / 3 = 2
+}
+
+void test_divide_by_zero(void) {
+    TEST_ASSERT_EQUAL(0, divide(5, 0)); // Handle divide by zero case
+}
+
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_add_positive_numbers);
@@ -74,4 +82,6 @@ int main(void) {
     RUN_TEST(test_subtract_negative_numbers);
     RUN_TEST(test_subtract_mixed_numbers);
     RUN_TEST(test_multiply_numbers);
+    RUN_TEST(test_divide_numbers);
+    RUN_TEST(test_divide_by_zero);
 }
